@@ -1,0 +1,10 @@
+
+dist/**/*
+/.env*
+!.env.sample
+node_modules
+.DS_Store
+/vendor
+foo.*
+bar.*
+baz.*

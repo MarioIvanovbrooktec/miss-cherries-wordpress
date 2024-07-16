@@ -1,0 +1,15 @@
+$fa-font-path: '../fonts';
+
+// Font Awesome Imports
+@import 'fontawesome';
+@import 'regular';
+@import 'solid';
+@import 'brands';
+
+// Bootstrap Imports
+@import 'base/bootstrap-vars';
+@import 'bootstrap';
+
+@import 'base/color';
+@import 'base/font';
+@import 'base/mixins';

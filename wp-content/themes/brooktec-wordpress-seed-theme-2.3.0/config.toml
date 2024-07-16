@@ -1,0 +1,43 @@
+[paths]
+source = "./src"
+dest = "./dist"
+
+[sources]
+img = "img"
+font = "fonts"
+js = "js"
+jsAdmin = "js-admin"
+jsLogin = "js-login"
+sass = "sass"
+vendor = "vendor"
+
+[vendor]
+sass = [
+  "./node_modules/@fortawesome/fontawesome-free/scss",
+  "./node_modules/bootstrap/scss",
+]
+css = []
+js = [
+  "./node_modules/bootstrap/dist/js/bootstrap.min.js",
+]
+fonts = [
+  "./node_modules/@fortawesome/fontawesome-free/webfonts/*",
+]
+
+[uglify]
+[uglify.admin]
+mangle.reserved = []
+mangle.toplevel = false
+
+[uglify.front]
+mangle.reserved = []
+mangle.toplevel = true
+
+[uglify.login]
+mangle.reserved = []
+mangle.toplevel = true
+
+[phptests]
+phpstan = true
+phpcs = true
+phpmd = true

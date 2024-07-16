@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<ruleset name="Brooktec WordPress Standard" namespace="Brooktec\WP\CS\Standard">
+    <rule ref="PSR12">
+        <type>warning</type>
+        <exclude name="PSR1.Files.SideEffects"/>
+    </rule>
+</ruleset>

@@ -1,0 +1,17 @@
+includes:
+  - vendor/szepeviktor/phpstan-wordpress/extension.neon
+
+parameters:
+  level: 5
+  reportUnmatchedIgnoredErrors: false
+  ignoreErrors:
+    - '#Function .* invoked with .* parameters, 0 required#'
+  paths:
+    - .
+  excludePaths:
+    - vendor
+  stubFiles:
+    - vendor/php-stubs/wordpress-stubs/wordpress-stubs.php
+    - vendor/php-stubs/acf-pro-stubs/acf-pro-stubs.php
+  scanDirectories:
+    - ../../../
