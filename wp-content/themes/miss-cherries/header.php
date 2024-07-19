@@ -14,3 +14,28 @@ if (!defined('ABSPATH')) {
         <?php wp_head(); ?>
     </head>
     <body <?php body_class(); ?>>
+    <div class="container-fluid text-center top-nav shadow">
+        <div class="row">
+            <div class="col-8 offset-2 ">
+                <div class="container d-flex justify-content-center">
+                    <?php
+                        $custom_logo_id = get_theme_mod( 'custom_logo' );
+                        $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+                        if ( has_custom_logo() ) {
+                            echo '<img src="' . esc_url( $logo[0] ) . '" alt="' . get_bloginfo( 'name' ) . '">';
+                        } else {
+                            echo '<h1>' . get_bloginfo('name') . '</h1>';
+                        }
+                    ?>
+                </div>
+            </div>
+        </div>
+    </div>
+    <?php
+        wp_nav_menu( array(
+            'menu' => 'Project Nav'
+        ) );
+
+
+
+
