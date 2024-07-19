@@ -10,7 +10,7 @@ use WP_Query;
  * Helper functions for URLs.
  *
  * @package Brooktec\Helpers
- * @since 1.0.0
+ * @since   1.0.0
  * @version 1.0.0
  */
 class Url
@@ -43,7 +43,7 @@ class Url
     /**
      * Remove http:// and https:// from URL
      *
-     * @param string $url
+     * @param  string $url
      * @return string
      */
     public static function removeHttp($url)
@@ -56,7 +56,7 @@ class Url
     /**
      * Add http:// or https:// to URL
      *
-     * @param string $url
+     * @param  string $url
      * @return string
      */
     public static function addHttp($url)
@@ -67,8 +67,8 @@ class Url
     /**
      * Get the CSS inline style for a background image
      *
-     * @param string $image_url URL of the image
-     * @param string $property CSS property name (default: background-image)
+     * @param  string $image_url URL of the image
+     * @param  string $property  CSS property name (default: background-image)
      * @return string
      */
     public static function background($image_url, $property = 'background-image')
@@ -79,7 +79,7 @@ class Url
     /**
      * Get the URL of a page with a specific template
      *
-     * @param string $template
+     * @param  string $template
      * @return string|null
      */
     public static function pageTemplate($template)

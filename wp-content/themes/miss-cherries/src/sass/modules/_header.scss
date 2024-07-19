@@ -1,0 +1,30 @@
+body {
+  & > header {
+    .header-nav {
+      color: $black;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      text-transform: uppercase;
+
+      a {
+        color: $black;
+        text-decoration: none;
+      }
+
+      li {
+
+        & > ul {
+          display: none;
+
+        }
+
+        &:hover > ul {
+          color: $miss-cheries-pink;
+          display: block;
+          position: absolute;
+        }
+      }
+    }
+  }
+}

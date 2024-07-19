@@ -73,7 +73,11 @@ add_action('login_enqueue_scripts', function () {
     $theme_version = wp_get_theme()->get('version');
     $stylesheet_directory_uri = get_stylesheet_directory_uri();
     if (file_exists(get_stylesheet_directory() . '/dist/js/login.css')) {
-        wp_enqueue_style(MISS_CHERRIES_THEME_SLUG . '/login', $stylesheet_directory_uri . '/dist/css/login.css', array());
+        wp_enqueue_style(
+            MISS_CHERRIES_THEME_SLUG . '/login',
+            $stylesheet_directory_uri . '/dist/css/login.css',
+            array()
+        );
     }
     if (file_exists(get_stylesheet_directory() . '/dist/js/login.min.js')) {
         wp_enqueue_script(

@@ -8,7 +8,7 @@ namespace Brooktec\Helpers;
  * Helper functions for assets.
  *
  * @package Brooktec\Helpers
- * @since 1.0.0
+ * @since   1.0.0
  * @version 1.0.0
  */
 class Assets
@@ -18,7 +18,7 @@ class Assets
      *
      * It gets the URI of an asset file. For use on the src attribute of an image tag, for example.
      *
-     * @param string $name Name of the file. For example: image.png
+     * @param  string $name Name of the file. For example: image.png
      * @return string
      */
     public static function getUri($name)
@@ -32,7 +32,7 @@ class Assets
      *
      * It gets the URI of an asset file. For use on the src attribute of an image tag, for example.
      *
-     * @param string $name Name of the file. For example: image.png
+     * @param  string $name Name of the file. For example: image.png
      * @return string
      */
     public static function getParentThemeUri($name)
@@ -46,7 +46,7 @@ class Assets
      *
      * Gets the full path to the asset on the server
      *
-     * @param string $name Name of the file. For example: image.png
+     * @param  string $name Name of the file. For example: image.png
      * @return string
      */
     public static function getAssetPath($name)
@@ -60,7 +60,7 @@ class Assets
      *
      * Gets the full path to the asset on the server
      *
-     * @param string $name Name of the file. For example: image.png
+     * @param  string $name Name of the file. For example: image.png
      * @return string
      */
     public static function getParentThemeAssetPath($name)
@@ -74,7 +74,7 @@ class Assets
      *
      * Alias for getAssetPath
      *
-     * @param string $name Name of the file. For example: image.png
+     * @param  string $name Name of the file. For example: image.png
      * @return string
      */
     public static function getSrc($name)
@@ -85,8 +85,8 @@ class Assets
     /**
      * Get the contents of an SVG file
      *
-     * @param string $name Name of the file. For example: image.png
-     * @return string
+     * @param                                        string $name Name of the file. For example: image.png
+     * @return                                       string
      * @SuppressWarnings(PHPMD.ErrorControlOperator)
      */
     public static function getSvgContents($name)
@@ -97,8 +97,8 @@ class Assets
     /**
      * Get the contents of an SVG file from the parent theme
      *
-     * @param string $name Name of the file. For example: image.png
-     * @return string
+     * @param                                        string $name Name of the file. For example: image.png
+     * @return                                       string
      * @SuppressWarnings(PHPMD.ErrorControlOperator)
      */
     public static function getParentThemeSvgContents($name)

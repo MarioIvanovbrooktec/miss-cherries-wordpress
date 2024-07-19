@@ -8,13 +8,13 @@ namespace Brooktec\Helpers;
  * Helper functions for attachments.
  *
  * @package Brooktec\Helpers
- * @since 1.0.0
+ * @since   1.0.0
  * @version 1.0.0
  */
 class Attachment
 {
     /**
-     * @param string $size
+     * @param  string $size
      * @return string Thumbnail Uri of current post
      */
     public static function getThumbnailUri($size = 'original')
@@ -23,8 +23,8 @@ class Attachment
     }
 
     /**
-     * @param int|null|\WP_Post $post_id
-     * @param string $size
+     * @param  int|null|\WP_Post $post_id
+     * @param  string            $size
      * @return string Thumbnail Uri of post
      */
     public static function getThumbnailUriById($post_id, $size = 'original')
@@ -33,8 +33,8 @@ class Attachment
     }
 
     /**
-     * @param int|null|\WP_Post $attachment_id
-     * @param string $size
+     * @param  int|null|\WP_Post $attachment_id
+     * @param  string            $size
      * @return string Thumbnail Uri of post
      */
     public static function getThumbnailUriByAttachmentId($attachment_id, $size = 'original')

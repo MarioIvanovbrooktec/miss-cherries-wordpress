@@ -8,13 +8,13 @@ namespace Brooktec\Helpers;
  * Helper functions for taxonomies.
  *
  * @package Brooktec\Helpers
- * @since 1.0.0
+ * @since   1.0.0
  * @version 1.0.0
  */
 class Taxonomy
 {
     /**
-     * @param int $post_id
+     * @param  int $post_id
      * @return \WP_Term
      */
     public static function getCategory($post_id = 0)
@@ -23,7 +23,7 @@ class Taxonomy
     }
 
     /**
-     * @param int $post_id
+     * @param  int $post_id
      * @return \WP_Term
      */
     public static function getTag($post_id = 0)
@@ -32,8 +32,8 @@ class Taxonomy
     }
 
     /**
-     * @param $taxonomy
-     * @param int $post_id
+     * @param  $taxonomy
+     * @param  int $post_id
      * @return \WP_Term
      */
     public static function getTerm($taxonomy, $post_id = 0)
@@ -43,8 +43,8 @@ class Taxonomy
     }
 
     /**
-     * @param $taxonomy
-     * @param int $post_id
+     * @param  $taxonomy
+     * @param  int $post_id
      * @return array Terms of taxonomy
      */
     public static function getTerms($taxonomy, $post_id = 0)
