@@ -1,5 +1,7 @@
 <?php
 
+include 'inc/social_links.php';
+
 if (!defined('ABSPATH')) {
     die();
 }

@@ -1,0 +1,27 @@
+body {
+  & > footer {
+
+    .social-media-div {
+
+      background-color: $miss-cheries-light-grey;
+    }
+
+    .social-media {
+
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+
+      a {
+        color: $miss-cheries-logos-grey;
+        font-size: 1.5rem;
+        text-decoration: none;
+
+        &:hover {
+
+          color: $miss-cheries-pink;
+        }
+      }
+    }
+  }
+}
