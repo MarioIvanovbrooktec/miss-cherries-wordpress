@@ -30,6 +30,38 @@ if (!defined('ABSPATH')) {
                             <?php the_sub_field('button_text_main'); ?>
                         </button>
                     </div>
+                    <div
+                        class="modal fade"
+                        id="myModal" tabindex="-1"
+                        aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">
+                                    <?php the_sub_field('title_modal'); ?>
+                                </h1>
+                                <button
+                                    type="button"
+                                    class="btn-close"
+                                    data-bs-dismiss="modal"
+                                    aria-label="Close">
+                                </button>
+                                </div>
+                                <div class="modal-body">
+                                <?php the_sub_field('description_modal'); ?>
+                                </div>
+                                <div class="modal-footer">
+                                <button
+                                type="button"
+                                class="btn btn-primary modal-close-button"
+                                data-bs-dismiss="modal">
+                                    <?php the_sub_field('button_text_modal'); ?>
+                                </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 <?php endif; ?>
             <?php endwhile; ?>
         <?php endif; ?>
