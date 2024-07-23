@@ -23,5 +23,37 @@ body {
         }
       }
     }
+
+    .title-newsletter-main {
+
+      font-size: 1.2rem;
+      text-transform: uppercase;
+    }
+
+    .description-newsletter-main {
+
+      font-size: .8rem;
+      text-wrap: wrap;
+      word-wrap: break-word;
+    }
+
+    .input-form {
+
+      border-color: $black;
+      border-left: 0;
+      border-radius: 0%;
+      border-right: 0;
+      border-top: 0;
+    }
+
+    .black-box-div {
+
+      background-color: $black;
+      border: 0;
+      color: $white;
+      padding-left: .5rem;
+      padding-right: .5rem;
+      text-transform: uppercase;
+    }
   }
 }
