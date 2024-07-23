@@ -26,7 +26,7 @@ if (!defined('ABSPATH')) {
                         </div>
                     </div>
                     <div>
-                        <button type="button" class="black-box-div" id="sign-up-button">
+                        <button type="button" class="black-box-div mb-5" id="sign-up-button">
                             <?php the_sub_field('button_text_main'); ?>
                         </button>
                     </div>
