@@ -5,7 +5,7 @@ if (!defined('ABSPATH')) {
 }
 ?>
 <section class="module-newsletter">
-    <div class="container col-4 d-flex flex-column align-items-center">
+    <div class="container col-md-4 col-sm-10 d-flex flex-column align-items-center">
         <?php if (have_rows('footer', 'option')) : ?>
             <?php while (have_rows('footer', 'option')) :
                 the_row(); ?>

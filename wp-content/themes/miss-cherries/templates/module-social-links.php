@@ -5,8 +5,8 @@ if (!defined('ABSPATH')) {
 }
 ?>
 <section class="social-links">
-    <div class="container-fluid mt-5 social-media-div">
-        <div class="container col-2 offset-5 py-5">
+    <div class="container-fluid mt-5 social-media-div d-flex justify-content-center ">
+        <div class="container col-md-3 py-5">
             <div class="social-media">
                 <?php if (get_theme_mod('twitter')) : ?>
                     <a href="<?php echo get_theme_mod('twitter'); ?>">

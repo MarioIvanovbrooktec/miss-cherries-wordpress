@@ -7,17 +7,34 @@ if (!defined('ABSPATH')) {
 ?>
 <section class="module-promotion">
     <div class="promotion-div">
-        <div class="container-fluid">
+        <div class="container">
             <?php if (have_rows('footer', 'option')) : ?>
                 <?php while (have_rows('footer', 'option')) :
                     the_row(); ?>
                     <?php if (get_row_layout() == 'promotion_section') : ?>
-                        <div class="container col-10 offset-1">
-                            <div class="container d-flex justify-content-center py-5 promotion-desc ">
-                                <?php the_sub_field('description_promotion'); ?>
+                        <div class=" col-md-10 offset-md-1 col-sm-12">
+                            <div class="d-flex justify-content-center py-5">
+                                <div class="promotion-desc">
+                                    <?php the_sub_field('description_promotion'); ?>
+                                </div>
                             </div>
-                            <div class="container d-flex justify-content-center pb-5">
-                                <?php the_sub_field('slogans_promotion'); ?>
+                            <div class="pb-5">
+                                <div class=" d-none d-md-block text-center">
+                                    <?php if (have_rows('slogans_promotion')) : ?>
+                                        <?php while (have_rows('slogans_promotion')) :
+                                            the_row(); ?>
+                                            <?php the_sub_field('slogan_repeater'); ?>
+                                        <?php endwhile; ?>
+                                    <?php endif; ?>
+                                </div>
+                                <?php if (have_rows('slogans_promotion')) : ?>
+                                    <?php while (have_rows('slogans_promotion')) :
+                                        the_row(); ?>
+                                        <div class="d-flex d-block d-md-none flex-column align-items-center">
+                                            <?php the_sub_field('slogan_repeater'); ?>
+                                        </div>
+                                    <?php endwhile; ?>
+                                <?php endif; ?>
                             </div>
                         </div>
                     <?php endif; ?>
