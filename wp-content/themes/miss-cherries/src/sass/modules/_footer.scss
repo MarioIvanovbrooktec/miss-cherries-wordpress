@@ -1,16 +1,28 @@
 body {
   & > footer {
 
-    .social-media-div {
 
+    .social-links {
+      @include media-breakpoint-down(md) {
+
+        margin-top: -3.5rem;
+      }
+
+      padding: 3rem;
       background-color: $miss-cheries-dark-grey;
     }
 
     .social-media {
 
+      @include media-breakpoint-down(md) {
+
+        margin-top: 2rem;
+      }
       display: flex;
       flex-direction: row;
       justify-content: space-evenly;
+      padding-left: 3rem;
+      padding-right: 3rem;;
 
       a {
         color: $miss-cheries-logos-grey;
@@ -21,13 +33,6 @@ body {
 
           color: $miss-cheries-pink;
         }
-      }
-    }
-
-    @include media-breakpoint-down(md) {
-      .social-links {
-
-        margin-top: -3.5rem;
       }
     }
 
@@ -154,19 +159,16 @@ body {
     }
 
     .slogans-div {
+      @include media-breakpoint-up(md) {
+        flex-direction: row;
+        justify-content: space-around;
 
+      }
       align-items: center;
       display: flex;
       flex-direction: column;
       padding-bottom: 2rem;
-    }
-
-    @include media-breakpoint-up(md) {
-      .slogans-div {
-
-        flex-direction: row;
-        justify-content: space-around;
-      }
+      text-transform: uppercase;
     }
   }
 }

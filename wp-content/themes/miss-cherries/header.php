@@ -14,6 +14,7 @@ if (!defined('ABSPATH')) {
         <?php wp_head(); ?>
     </head>
     <body <?php body_class(); ?>>
+
         <header>
             <div class="container-fluid text-center top-nav shadow py-3">
                 <div class="row">
