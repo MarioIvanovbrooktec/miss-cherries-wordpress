@@ -6,10 +6,8 @@ if (!defined('ABSPATH')) {
 ?>
 <section class="module-instagram">
     <div class="promotion-overlap">
-        <div class="container col-1 d-flex justify-content-center">
-            <div class="black-box-div ">
-                <?php the_sub_field('button_text_social'); ?>
-            </div>
+        <div class="black-box-div ">
+            <?php the_sub_field('button_text_social'); ?>
         </div>
     </div>
     <div class="img-overlap">

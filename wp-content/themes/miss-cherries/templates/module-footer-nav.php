@@ -5,7 +5,7 @@ if (!defined('ABSPATH')) {
 }
 
 ?>
-<section class="module--footer-nav">
+<section class="module-footer-nav">
     <div>
         <?php
         if (has_nav_menu('footer-menu')) {
