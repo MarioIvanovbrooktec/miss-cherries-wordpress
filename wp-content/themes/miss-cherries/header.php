@@ -81,18 +81,17 @@ if (!defined('ABSPATH')) {
                     </div>
                 </div>
             </div>
-            <div class="container col-8 offset-2 d-none d-md-block my-3">
-                        <?php
-                        if (has_nav_menu('header-menu')) {
-                            wp_nav_menu(
-                                array(
-                                'menu' => 'header nav',
-                                'menu_class' => 'header-nav',
-                                'theme_location' => '__no_such_location',
-                                'fallback_cb' => false)
-                            );
-                        }
-                        ?>
+            <div class="container col-8 offset-2 d-none d-md-block mt-3 mb-5">
+                <?php
+                if (has_nav_menu('header-menu')) {
+                    wp_nav_menu(
+                        array(
+                        'theme_location' => 'header-menu',
+                        'menu_class' => 'header-nav',
+                        'fallback_cb' => false)
+                    );
+                }
+                ?>
             </div>
         </header>
 

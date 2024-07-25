@@ -20,6 +20,7 @@ if (!defined('ABSPATH')) {
                     <?php endif; ?>
                 <?php endwhile; ?>
             <?php endif; ?>
+            <?php get_template_part('templates/module', 'footer-nav'); ?>
             <?php get_template_part('templates/module', 'social-links'); ?>
             <div id="wp-scripts">
                 <?php wp_footer(); ?>

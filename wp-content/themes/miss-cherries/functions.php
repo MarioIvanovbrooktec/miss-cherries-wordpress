@@ -25,11 +25,19 @@ function miss_cherries_custom_logo_setup()
 }
 add_action('after_setup_theme', 'miss_cherries_custom_logo_setup');
 
-function miss_cherries_menu_register()
+function miss_cherries_menu_header_register()
 {
     register_nav_menu('header-menu', __('Header Menu'));
 }
-add_action('after_setup_theme', 'miss_cherries_menu_register');
+
+add_action('after_setup_theme', 'miss_cherries_menu_header_register');
+
+function miss_cherries_menu_footer_register()
+{
+    register_nav_menu('footer-menu', __('Footer Menu'));
+}
+
+add_action('after_setup_theme', 'miss_cherries_menu_footer_register');
 
 foreach ($required_files as $required_file) {
     include_once trailingslashit(get_stylesheet_directory()) . $required_file;
