@@ -14,19 +14,11 @@ if (!defined('ABSPATH')) {
                         <?php the_sub_field('description_promotion'); ?>
                     </div>
                 </div>
-                <div class="pb-5">
-                    <div class=" d-none d-md-block text-center">
-                        <?php if (have_rows('slogans_promotion')) : ?>
-                            <?php while (have_rows('slogans_promotion')) :
-                                the_row(); ?>
-                                <?php the_sub_field('slogan_repeater'); ?>
-                            <?php endwhile; ?>
-                        <?php endif; ?>
-                    </div>
+                <div class="slogans-div">
                     <?php if (have_rows('slogans_promotion')) : ?>
                         <?php while (have_rows('slogans_promotion')) :
                             the_row(); ?>
-                            <div class="d-flex d-block d-md-none flex-column align-items-center">
+                            <div>
                                 <?php the_sub_field('slogan_repeater'); ?>
                             </div>
                         <?php endwhile; ?>
