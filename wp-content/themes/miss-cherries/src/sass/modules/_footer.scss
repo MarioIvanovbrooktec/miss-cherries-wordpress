@@ -70,19 +70,42 @@ body {
 
     }
 
-    .promotion-div {
+
+    .module-promotion {
 
       background-color: $miss-cheries-light-grey;
       position: relative;
       z-index: -1;
 
       .promotion-desc {
+        @include media-breakpoint-down(md) {
+
+          padding-left: 2rem;
+          padding-right: 2rem;
+        }
 
         display: flex;
         font-size: .8rem;
         justify-content: center;
+        margin-bottom: 2rem;
+        padding-left: 10rem;
+        padding-right: 10rem;
+        padding-top: 3rem;
         text-align: center;
         text-wrap: wrap;
+      }
+
+      .slogans-div {
+        @include media-breakpoint-up(md) {
+          flex-direction: row;
+          justify-content: space-around;
+
+        }
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 5rem;
+        text-transform: uppercase;
       }
     }
 
@@ -146,18 +169,7 @@ body {
       }
     }
 
-    .slogans-div {
-      @include media-breakpoint-up(md) {
-        flex-direction: row;
-        justify-content: space-around;
 
-      }
-      align-items: center;
-      display: flex;
-      flex-direction: column;
-      padding-bottom: 2rem;
-      text-transform: uppercase;
-    }
 
     .input-holder {
 
@@ -180,5 +192,7 @@ body {
       padding-left: 1rem;
       padding-right: 1rem;
     }
+
+
   }
 }
