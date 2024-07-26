@@ -70,7 +70,6 @@ body {
 
     }
 
-
     .module-promotion {
 
       background-color: $miss-cheries-light-grey;
@@ -169,7 +168,18 @@ body {
       }
     }
 
+    .slogans-div {
+      @include media-breakpoint-up(md) {
+        flex-direction: row;
+        justify-content: space-around;
 
+      }
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 2rem;
+      text-transform: uppercase;
+    }
 
     .input-holder {
 
@@ -192,7 +202,5 @@ body {
       padding-left: 1rem;
       padding-right: 1rem;
     }
-
-
   }
 }

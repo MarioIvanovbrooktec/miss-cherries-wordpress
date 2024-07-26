@@ -1,18 +1,55 @@
 body {
   & > header {
+
+
     .header-nav-div {
       @include media-breakpoint-down(md) {
 
+        background-color: $white;
+        border: 2px solid $black;
+        border-radius: 4%;
         display: none;
+        margin-bottom: 0;
+        margin-left: 0;
+        margin-right: .5rem;
+        margin-top: 0;
+        position: absolute;
+        right: 0 ;
+        top: 15;
+        z-index: 10;
       }
 
-      margin-bottom: 1rem;
+      margin-bottom: 3rem;
       margin-left: 8rem;
       margin-right: 8rem;
       margin-top: 1rem;
     }
 
     .header-nav {
+      @include media-breakpoint-up(md) {
+
+        li {
+
+          &:hover > ul {
+
+            position: absolute;
+          }
+        }
+      }
+
+      @include media-breakpoint-down(md) {
+
+        align-items: start;
+        flex-direction: column;
+        padding-inline-start: 1rem;
+        padding-right: 3rem;
+
+        li {
+
+          margin-top: 1rem;
+
+        }
+      }
       color: $black;
       display: flex;
       flex-direction: row;
@@ -35,7 +72,6 @@ body {
         &:hover > ul {
           color: $miss-cheries-pink;
           display: block;
-          position: absolute;
         }
       }
     }

@@ -50,35 +50,17 @@ if (!defined('ABSPATH')) {
                             </div>
                         </div>
                     </div>
-                    <div class="col-2  d-block d-sm-none">
-                        <div class="dropdown">
+                    <div class="col-2  d-block d-md-none">
+                        <?php if (has_nav_menu('header-menu')) : ?>
                             <button class="btn   dropdown-btn-nav" type="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
+                            id="dropdown-header-menu-button">
                                 <i class="fa-solid fa-bars mobile-menu-icon"></i>
                             </button>
-                            <ul class="dropdown-menu mobile-dropdown">
-                                <li><a title="Collares" class="dropdown-item" href="#">COLLARES </a></li>
-                                <li><a title="Anillos" class="dropdown-item" href="#">ANILLOS </a></li>
-                                <li><a title="Pulseras" class="dropdown-item" href="#">PULSERAS </a></li>
-                                <li><a title="Chokers" class="dropdown-item" href="#">CHOKERS </a></li>
-                                <li><a title="Pendientes" class="dropdown-item" href="#">PENDIENTES <a></li>
-                                <li><a title="Mix & Match" class="dropdown-item" href="#">MIX & MATCH </a></li>
-                                <li><a title="Tobilleras" class="dropdown-item" href="#">TOBILLERAS </a></li>
-                                <li><a title="Gift Cards" class="dropdown-item" href="#">GIFT CARDS </a></li>
-                                <li> <hr class="dropdown-divider"></li>
-                                <li><a title="Mi cuenta" class="dropdown-item" href="#">MI CUENTA</a></li>
-                                <li><a title="Mis favoritos" class="dropdown-item" href="#">MIS FAVORITOS</a></li>
-                                <li>
-                                    <a title="Envio y Devoluciones" class="dropdown-item" href="#">
-                                        ENVIO Y DEVOLUCIONES
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
-            <div class="header-nav-div">
+            <div class="header-nav-div" id="header-nav-div">
                 <?php
                 if (has_nav_menu('header-menu')) {
                     wp_nav_menu(

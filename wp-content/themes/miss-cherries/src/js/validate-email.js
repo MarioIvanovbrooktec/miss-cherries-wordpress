@@ -1,5 +1,5 @@
 jQuery(function($){
-console.log("hooola");
+
 
   function validateEmail(email){
       var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
@@ -22,6 +22,14 @@ console.log("hooola");
               $("#invalid-email").show();
           }
       }
+  })
+
+  $("#dropdown-header-menu-button").on("click", function() {
+    if( !$("#header-nav-div").is(":visible")) {
+      $("#header-nav-div").show();
+    }else {
+      $("#header-nav-div").hide();
+    }
   })
 
 })
