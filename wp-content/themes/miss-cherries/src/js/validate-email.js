@@ -32,14 +32,13 @@ jQuery(function($){
     }
   })
 
-  var tags = $("li").filter(function() {
-    if( $(this).children("ul").length != 0 && $(this).children("i").length < 1) {
+
+ $(".menu-item-has-children").each(function() {
       $(this).children("a").after('<i class="fa-solid fa-chevron-down chevron"></i>');
-    }
   });
 
   $(".chevron").on("click", function() {
-    if( !$(this).parent().children("ul").is(":visible")) {
+    if( !$(this).parent(  ).children("ul").is(":visible")) {
       $(this).parent().children("ul").show();
     }else {
       $(this).parent().children("ul").hide();
