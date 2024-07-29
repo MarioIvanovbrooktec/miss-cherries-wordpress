@@ -32,4 +32,21 @@ jQuery(function($){
     }
   })
 
+  var tags = $("li").filter(function() {
+    if( $(this).children("ul").length !== 0) {
+      $(this).children("a").css("pointer-events", "none");
+      $(this).children("a").after('<i class="fa-solid fa-chevron-down"></i>');
+    }
+  });
+
+  $("li").on("click", function() {
+    if( $(this).children("ul").length !== 0) {
+      if( !$(this).children("ul").is(":visible")) {
+        $(this).children("ul").show();
+      }else {
+        $(this).children("ul").hide();
+      }
+    }
+  })
+
 })

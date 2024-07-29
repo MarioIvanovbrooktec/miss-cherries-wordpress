@@ -32,6 +32,8 @@ body {
 
           &:hover > ul {
 
+            color: $miss-cheries-pink;
+            display: block;
             position: absolute;
           }
         }
@@ -67,11 +69,6 @@ body {
         & > ul {
           display: none;
 
-        }
-
-        &:hover > ul {
-          color: $miss-cheries-pink;
-          display: block;
         }
       }
     }
