@@ -2,8 +2,8 @@ jQuery(function($){
 
 
   function validateEmail(email){
-      var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-      return regex.test(email);
+    var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    return regex.test(email);
   }
 
   $("#sign-up-button").on("click",function() {
@@ -22,7 +22,7 @@ jQuery(function($){
               $("#invalid-email").show();
           }
       }
-  })
+  });
 
   $("#dropdown-header-menu-button").on("click", function() {
     if( !$("#header-nav-div").is(":visible")) {
@@ -30,7 +30,7 @@ jQuery(function($){
     }else {
       $("#header-nav-div").hide();
     }
-  })
+  });
 
 
  $(".menu-item-has-children").each(function() {
