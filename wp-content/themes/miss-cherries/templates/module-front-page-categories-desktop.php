@@ -5,7 +5,7 @@ if (!defined('ABSPATH')) {
 }
 
 ?>
-<section class="module-categories">
+<section class="module-categories-desktop">
     <div class="background-div">
         <?php $image = get_sub_field('background_image'); ?>
         <img class="img-fluid" src="<?php echo $image;?>" alt="Background Image">
@@ -18,14 +18,15 @@ if (!defined('ABSPATH')) {
         ?>
     <div class="grid-container">
         <?php foreach ($terms as $current_term) :  ?>
+            <?php $link = $current_term->slug;?>
             <div class="category">
-                <a href="https://localhost:3000/front-page/">
+                <a href="https://localhost:3000/<?php echo $link;?>">
                     <div class="category-image">
                         <?php $image = get_field('category_image', $current_term); ?>
                         <img class="img-fluid" src="<?php echo $image;?>" alt="Cover Image">
                     </div>
                     <div class="category-name">
-                        <?php $name = $current_term -> name; ?>
+                        <?php $name = $current_term->name; ?>
                         <div class="black-box-div">
                             <?php echo $name; ?>
                         </div>

@@ -15,10 +15,13 @@ vendor = "vendor"
 sass = [
   "./node_modules/@fortawesome/fontawesome-free/scss",
   "./node_modules/bootstrap/scss",
+  "./node_modules/owl.carousel/src/scss",
 ]
 css = []
 js = [
+  "./node_modules/jquery/dist/jquery.min.js",
   "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+  "./node_modules/owl.carousel/dist/owl.carousel.min.js",
 ]
 fonts = [
   "./node_modules/@fortawesome/fontawesome-free/webfonts/*",

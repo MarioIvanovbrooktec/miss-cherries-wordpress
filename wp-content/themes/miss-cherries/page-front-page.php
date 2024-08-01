@@ -15,7 +15,8 @@ get_header();
                 <?php get_template_part('templates/module', 'front-page-cover'); ?>
             <?php endif; ?>
             <?php if (get_row_layout() == 'categories_section') : ?>
-                <?php get_template_part('templates/module', 'front-page-categories'); ?>
+                <?php get_template_part('templates/module', 'front-page-categories-desktop'); ?>
+                <?php get_template_part('templates/module', 'front-page-categories-mobile'); ?>
             <?php endif; ?>
         <?php endwhile; ?>
     <?php endif; ?>
