@@ -35,6 +35,7 @@ body {
         }
 
         .category-name {
+          background-color: $white;
           display: flex;
           flex-direction: row;
           font-size: .8rem;
@@ -45,4 +46,13 @@ body {
       }
     }
   }
+
+  .background-div {
+
+    position: absolute;
+    top: 67rem;
+    z-index: -10;
+  }
+
+
 }
