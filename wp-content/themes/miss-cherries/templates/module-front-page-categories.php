@@ -6,13 +6,17 @@ if (!defined('ABSPATH')) {
 
 ?>
 <section class="module-categories">
+    <div class="background-div">
+        <?php $image = get_sub_field('background_image'); ?>
+        <img class="img-fluid" src="<?php echo $image;?>" alt="Background Image">
+    </div>
     <?php
-        $terms = get_terms( array(
-        'taxonomy'=> 'product_categories',
+        $terms = get_terms(array(
+        'taxonomy' => 'product_categories',
         'hide_empty' => false,
-        ) );
+        ));
         $mod = (count($terms) % 3) + 1;
-    ?>
+        ?>
     <?php for ($i = 0; $i < $mod; $i++) : ?>
         <div class="category-rows">
             <?php for ($j = 0; $j < 3; $j++) : ?>
