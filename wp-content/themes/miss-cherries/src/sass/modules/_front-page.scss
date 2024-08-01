@@ -12,37 +12,37 @@ body {
 
   .module-categories {
 
-    .category-rows {
+    .grid-container {
 
-      display: flex;
-      flex-direction: row;
+      display: grid;
+      grid-template-columns: auto auto auto;
       justify-content: center;
+      direction: rtl;
+    }
 
+    .category {
 
-      .category {
+      box-shadow: 0 4px 8px 0 $miss-cheries-dark-grey, 0 6px 20px 0 $miss-cheries-dark-grey;
+      margin: 2rem;
 
-        box-shadow: 0 4px 8px 0 $miss-cheries-dark-grey, 0 6px 20px 0 $miss-cheries-dark-grey;
-        margin: 2rem;
+      a {
 
-        a {
+        text-decoration: none;
+      }
 
-          text-decoration: none;
-        }
+      .category-image {
 
-        .category-image {
+        max-width: 12rem;
+      }
 
-          max-width: 12rem;
-        }
-
-        .category-name {
-          background-color: $white;
-          display: flex;
-          flex-direction: row;
-          font-size: .8rem;
-          justify-content: center;
-          padding-bottom: .2rem;
-          padding-top: .2rem;
-        }
+      .category-name {
+        background-color: $white;
+        display: flex;
+        flex-direction: row;
+        font-size: .8rem;
+        justify-content: center;
+        padding-bottom: .2rem;
+        padding-top: .2rem;
       }
     }
   }
