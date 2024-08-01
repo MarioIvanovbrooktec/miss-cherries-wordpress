@@ -15,7 +15,7 @@ if (!defined('ABSPATH')) {
     </head>
     <body <?php body_class(); ?>>
         <header>
-            <div class="container-fluid text-center shadow py-3">
+            <div class="header-logo-div">
                 <div class="row">
                     <div class="col-8 offset-2 justify-content- ">
                         <div>
