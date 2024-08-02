@@ -6,7 +6,7 @@ if (!defined('ABSPATH')) {
 
 ?>
 
-<section class="module-categories-mobile">
+<section class="module-categories">
     <?php
         $terms = get_terms(array(
             'taxonomy' => 'product_categories',
@@ -18,10 +18,10 @@ if (!defined('ABSPATH')) {
             $slides++;
         }
         ?>
-    <div class="owl-carousel owl-theme">
+    <div class="owl-carousel owl-theme" id="mobile-grid">
         <?php for ($i = 0; $i < $slides; $i++) : ?>
-            <div class="item">
-                <div class="grid-container">
+            <div class="item" id="carousel-item">
+                <div class="grid-container" id="desktop-grid">
                     <?php for ($j = 0; $j < 4; $j++) : ?>
                         <?php if (($j + 4 * $i) < count($terms)) : ?>
                             <?php $current_term = $terms[($j + 4 * $i)]; ?>

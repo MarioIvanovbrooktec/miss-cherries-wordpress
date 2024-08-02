@@ -59,4 +59,25 @@ jQuery(function($){
       $(this).parent().children("ul").hide();
     }
   });
+
+
+
+  var mobile_format = $("#mobile-grid").contents();
+  var desktop_format = $("#desktop-grid").contents();
+
+  function categories_format() {
+    if (window.innerWidth > 768) {
+
+      $("#mobile-grid").attr("class", "grid-container");
+      $("#mobile-grid").html(desktop_format);
+    }
+    else{
+
+      $("#mobile-grid").attr("class", "owl-carousel owl-theme");
+      $("#mobile-grid").html(mobile_format);
+    }
+  }
+
+  window.onload = categories_format();
+  window.onresize = categories_format();
 })

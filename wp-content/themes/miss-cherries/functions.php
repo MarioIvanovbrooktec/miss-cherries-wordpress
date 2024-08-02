@@ -1,6 +1,5 @@
 <?php
 
-include 'inc/social_links.php';
 
 if (!defined('ABSPATH')) {
     die();
@@ -10,6 +9,7 @@ $required_files = [
     'core/helpers.loader.php',
     'inc/config/definitions.php',
     'inc/config/theme-config.php',
+    'inc/post_type/loader.php'
 ];
 
 function miss_cherries_custom_logo_setup()

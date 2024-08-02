@@ -8,6 +8,8 @@ $required_files = [
     'security',
     'enqueue',
     'support',
+    'options',
+    'social_links',
 ];
 
 foreach ($required_files as $required_file) {
