@@ -7,6 +7,7 @@ if (!defined('ABSPATH')) {
 
 $required_files = [
     'product',
+    'category_fields',
 ];
 
 foreach ($required_files as $required_file) {

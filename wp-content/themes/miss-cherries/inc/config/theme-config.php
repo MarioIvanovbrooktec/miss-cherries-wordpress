@@ -8,6 +8,7 @@ $required_files = [
     'security',
     'enqueue',
     'support',
+    'customs',
     'options',
     'social_links',
 ];
