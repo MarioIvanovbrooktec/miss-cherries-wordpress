@@ -3,11 +3,12 @@
 if (!defined('ABSPATH')) {
     die();
 }
-//hacer un foreach aqui como en theme-config.php
+
 
 $required_files = [
-    'security',
-    'enqueue',
-    'support',
-    'options',
+    'product',
 ];
+
+foreach ($required_files as $required_file) {
+    include_once trailingslashit(__DIR__) . "_{$required_file}.type.php";
+}
