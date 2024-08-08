@@ -56,14 +56,11 @@ jQuery(function($){
       slides++;
     }
 
-    console.log("count: "+ count + " slides: " + slides + " mod: " + mod)
     var start=0;
     var end=0;
     for(var i=0; i < slides; i++){
       start = i * 4;
       end = start + 4;
-
-      console.log( "start: " + start + " end: "+ end);
       categories.slice(start, end).wrapAll('<div class="item" />')
     }
   }
