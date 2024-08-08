@@ -3,6 +3,7 @@
 if (!defined('ABSPATH')) {
     die();
 }
+
 ?>
 <section class="social-links">
     <div class="container">

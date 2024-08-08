@@ -1,20 +1,7 @@
 jQuery(function($){
 
-  $('.owl-carousel').owlCarousel({
-    loop:false,
-    nav:true,
-    responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:3
-        },
-        1000:{
-            items:5
-        }
-    }
-})
+
+
 
   function validateEmail(email){
     var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
@@ -60,24 +47,20 @@ jQuery(function($){
     }
   });
 
-
-
-  var mobile_format = $("#mobile-grid").contents();
-  var desktop_format = $("#desktop-grid").contents();
-
-  function categories_format() {
-    if (window.innerWidth > 768) {
-
-      $("#mobile-grid").attr("class", "grid-container");
-      $("#mobile-grid").html(desktop_format);
-    }
-    else{
-
-      $("#mobile-grid").attr("class", "owl-carousel owl-theme");
-      $("#mobile-grid").html(mobile_format);
-    }
-  }
-
-  window.onload = categories_format();
-  window.onresize = categories_format();
+  $(window).on("load",function() {
+    $('.owl-carousel').owlCarousel({
+      loop:false,
+      nav:false,
+      stageClass:'grid-container',
+      responsive:{
+        0:{
+          items:4
+        },
+        768: {
+          items: $(".category").length
+        }
+      }
+    })
+  })
 })
+

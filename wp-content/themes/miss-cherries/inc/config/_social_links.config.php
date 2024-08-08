@@ -1,5 +1,7 @@
 <?php
 
+use WP_Customize_Control;
+
 function social_media($wp_customize)
 {
     //Setting

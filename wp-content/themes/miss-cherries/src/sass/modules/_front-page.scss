@@ -1,4 +1,22 @@
 body {
+
+  .black-box-div-category {
+
+    @include media-breakpoint-down(md) {
+      padding: 0;
+      text-align: center;
+      width: 100%;
+    }
+
+    background-color: $black;
+    border: 0;
+    color: $white;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    text-transform: uppercase;
+
+  }
+
   .black-box-div {
 
     background-color: $black;
@@ -17,39 +35,48 @@ body {
     }
   }
 
+  .carousel-cover {
+
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
+  }
+
   .module-categories {
 
-    @include media-breakpoint-down(md) {
-
-      .grid-container {
-
-
-        align-items:  center;
-        grid-template-columns: auto auto;
-        justify-content: space-evenly;
-      }
-
-      .category {
-
-        box-shadow: none;
-        margin: 0;
-        padding-bottom: 1rem;
-        padding-top: 1rem;
-      }
-    }
 
     .grid-container {
+      @include media-breakpoint-down(md) {
+
+        direction: unset;
+        grid-template-columns: auto auto auto auto;
+        justify-content: space-between;
+        padding-left: 2rem;
+        padding-right: 4rem;
+        padding-top: 0;
+      }
 
       direction: rtl;
       display: grid;
-      grid-template-columns: auto auto auto;
-      justify-content: center;
+      grid-template-columns: auto auto auto ;
+      justify-content: space-evenly;
+      padding-bottom: 2rem;
+      padding-left: 6rem;
+      padding-right: 6rem;
+      padding-top: 2rem;
     }
 
     .category {
+      @include media-breakpoint-down(md) {
+
+        min-width: 10rem;
+        width: auto;
+      }
 
       box-shadow: 0 4px 8px 0 $miss-cheries-dark-grey, 0 6px 20px 0 $miss-cheries-dark-grey;
-      margin: 2rem;
+      margin-top: 2rem;
+      min-width: 10rem;
+      width: auto;
 
       a {
 
@@ -57,11 +84,21 @@ body {
       }
 
       .category-image {
+        @include media-breakpoint-down(md) {
+          position: relative;
+          z-index: -1;
+        }
 
-        max-width: 12rem;
       }
 
       .category-name {
+        @include media-breakpoint-down(md) {
+          margin-top: -2rem;
+          padding-bottom: 0;
+          padding-top: 0;
+          position: relative;
+        }
+
         background-color: $white;
         display: flex;
         flex-direction: row;
