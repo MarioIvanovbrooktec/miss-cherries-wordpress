@@ -1,0 +1,129 @@
+body {
+
+  .black-box-div-category {
+
+    @include media-breakpoint-down(md) {
+      padding: 0;
+      text-align: center;
+      width: 100%;
+    }
+
+    background-color: $black;
+    border: 0;
+    color: $white;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    text-transform: uppercase;
+
+  }
+
+  .black-box-div {
+
+    background-color: $black;
+    border: 0;
+    color: $white;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    text-transform: uppercase;
+
+  }
+
+  .module-cover {
+
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+  }
+
+  .carousel-cover {
+
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
+  }
+
+  .module-categories {
+
+    .item {
+      @include media-breakpoint-down(md) {
+
+        padding-left: 2rem;
+        padding-right: 2rem;
+
+      }
+
+      direction: unset;
+      display: grid;
+      grid-template-columns: auto auto;
+      justify-content: center;
+    }
+
+    .grid-container {
+
+      direction: rtl;
+      display: grid;
+      grid-template-columns: auto auto auto ;
+      justify-content: center;
+      padding-left: 10rem;
+      padding-right: 10rem;
+    }
+
+    .category {
+      @include media-breakpoint-down(md) {
+
+        background-color: unset;
+        margin-left:  .5rem;
+        margin-right:  .5rem;
+      }
+
+      background-color: $white;
+      box-shadow: 0 4px 8px 0 $miss-cheries-dark-grey, 0 6px 20px 0 $miss-cheries-dark-grey;
+      margin-bottom: 2rem;
+      margin-left: 2rem;
+      margin-right: 2rem;
+
+      a {
+        text-decoration: none;
+      }
+
+      .category-image {
+        @include media-breakpoint-down(md) {
+          height: 100%;
+          position: relative;
+          z-index: -1;
+        }
+
+        height: calc(100% - 2rem);
+
+        img {
+
+          height: 100%;
+        }
+      }
+
+      .category-name {
+        @include media-breakpoint-down(md) {
+          margin-top: -2rem;
+          padding-bottom: 0;
+          padding-top: 0;
+          position: relative;
+        }
+
+        background-color: $white;
+        display: flex;
+        flex-direction: row;
+        font-size: .8rem;
+        justify-content: center;
+        padding-bottom: .2rem;
+        padding-top: .2rem;
+      }
+    }
+
+    .background-div {
+
+      position: absolute;
+      top: 68rem;
+      z-index: -10;
+    }
+  }
+}
