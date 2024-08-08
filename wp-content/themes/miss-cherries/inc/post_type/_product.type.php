@@ -7,7 +7,7 @@ if (!defined('ABSPATH')) {
 function miss_cherries_custom_post_type_product()
 {
     register_post_type(
-        'misscherries_product',
+        'product',
         array(
             'labels'      => array(
                 'name'          => __('Products', 'textdomain'),
@@ -42,8 +42,8 @@ function miss_cherries_register_taxonomy_product_categories()
         'show_ui'           => true,
         'show_admin_column' => true,
         'query_var'         => true,
-        'rewrite'           => ['slug' => 'product_categories'],
+        'rewrite'           => ['slug' => 'product-categories'],
     );
-    register_taxonomy('product_categories', ['misscherries_product'], $args);
+    register_taxonomy('product_categories', ['product'], $args);
 }
 add_action('init', 'miss_cherries_register_taxonomy_product_categories');
