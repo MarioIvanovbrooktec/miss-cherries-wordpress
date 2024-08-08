@@ -1,6 +1,8 @@
 jQuery(function($){
 
 
+
+
   function validateEmail(email){
     var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
     return regex.test(email);
@@ -44,4 +46,47 @@ jQuery(function($){
       $(this).parent().children("ul").hide();
     }
   });
+
+  function categoryWrap() {
+    var count = $(".category").length;
+    var categories = $("#first-container").children();
+    var slides = count / 4;
+    var mod = count % 4;
+    if(mod != 0) {
+      slides++;
+    }
+
+    var start=0;
+    var end=0;
+    for(var i=0; i < slides; i++){
+      start = i * 4;
+      end = start + 4;
+      categories.slice(start, end).wrapAll('<div class="item" />')
+    }
+  }
+
+  function postsCarousel() {
+    var checkWidth = $(window).width();
+    var owlPost = $("#first-container");
+    if (checkWidth > 767) {
+      if (typeof owlPost.data('owl.carousel') != 'undefined') {
+        owlPost.data('owl.carousel').destroy();
+        $(".category").unwrap();
+      }
+      owlPost.attr("class", "grid-container");
+    } else if (checkWidth < 768) {
+      owlPost.attr("class", "owl-carousel owl-theme");
+      categoryWrap();
+
+      owlPost.owlCarousel({
+        items: 1,
+        nav: false,
+        loop: false
+      });
+    }
+  }
+
+  postsCarousel();
+  $(window).resize(postsCarousel);
 })
+
